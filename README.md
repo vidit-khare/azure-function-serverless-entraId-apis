@@ -59,7 +59,7 @@ This repository contains Python code for Azure Functions to manage **Entra ID (A
 
 ## Usage
 
-### Adding a User
+### 1. Adding a User
 
 To add a user, send a POST request to the `/api/users` endpoint with the user details in the request body. Example:
 
@@ -79,7 +79,7 @@ curl -X POST \
 
 ```
 
-### Updating a User
+### 2. Updating a User
 
 To update a user, send a PATCH request to the `/api/users/{user_id}` endpoint with the feilds to be updated details in the request body. Example:
 
@@ -89,7 +89,7 @@ curl -X PATCH \
     -d '{  "accountEnabled": false }'
 ```
 
-### Deleting a User
+### 3. Deleting a User
 
 To delete a user, send a DELETE request to the `/api/users/{user_id}` endpoint. 
 
@@ -98,7 +98,7 @@ curl -X https://<yourapp>.azurewebsites.net/api/users/<user_id>
 
 ```
 
-### Listing a User
+### 4. Listing a User
 
 To list a user, send a GET request to the `/api/users/` endpoint. 
 
@@ -107,8 +107,6 @@ curl -X https://<yourapp>.azurewebsites.net/api/users/
 
 ```
 ## Deployment
-
-### Deploy to Azure:
 
 ```bash
 func azure functionapp publish <FunctionAppName>
